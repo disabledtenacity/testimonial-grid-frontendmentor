@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* ======== Fonts ======== */
+    /* Font sizes */
+	--fs-300: 0.85rem; 
+	--fs-400: 1rem;
+	--fs-500: 1.5rem;
+    /* Font weights */
+    --fw-600: font-weight: 600;
+    --fw-500: font-weight: 500;
+    /* ======== Colors ======== */
+    /* Primary colors */
+  --purple-100: hsl(263, 55%, 52%);
+  --purple-200: hsl(264, 82%, 70%);
+  --blue-100: hsl(217, 19%, 35%);
+  --blue-200: hsl(217, 30%, 14%);
+  /* Neutral colors */
+  --white: hsl(0, 0%, 100%);
+  --gray-100: hsl(210, 46%, 95%);
+  --gray-200: hsl(0, 0%, 81%);
+}
+
+/* Gobal 1440px */
+
+#container{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0 auto;
+    background-color: var(--gray-200);
+    max-width: 90rem;
+    /* Grid layout */
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas: 
+    "one one two five"
+    "three four four five";
+}
+
+h2,p{
+    margin: 0;
+}
+
+
+.cards{
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 0.625rem;
+    box-shadow: hsla(249, 59%, 11%, 0.15) 0rem 3rem 6.25rem 0rem;
+}
+
+.flex{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--purple-200);
+}
+
+.wrapper{
+    font-size: var(--fs-300);
+    line-height: 1.125rem;
+}
+
+.name{
+    font-weight: var(--fw-600);
+}
+
+.position{
+    opacity: 0.5;
+}
+
+.pull-quote{
+    padding: 1.5rem 0;
+    text-align: start;
+    font-size: var(--fs-500);
+    font-weight: var(--fw-600);
+    line-height: 1.5rem;
+    margin-bottom: 0rem;
+}
+
+.review{
+    font-size: var(--fs-600);
+    font-weight: var(--fw-500);
+    opacity: 0.7;
+
+}
+
+.cards:nth-of-type(1){
+    background-color: var(--purple-100);
+    color: var(--white);
+    background-image: url('../img/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+    grid-area: one;
+
+}
+
+.cards:nth-of-type(2){
+    background-color: var(--blue-100);
+    color: var(--white);
+    grid-area: two;
+}
+
+.cards:nth-of-type(3){
+    background-color: var(--white);
+    grid-area: three;
+}
+
+.cards:nth-of-type(4){
+    background-color: var(--blue-200);
+    color: var(--white);   
+    grid-area: four;
+}
+
+.cards:nth-of-type(5){
+    background-color: var(--white);
+    grid-area: five;
+}
+
+.attribution{
+    text-align: center;
+    color: var(--blue-200);
+    text-decoration: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+
+/* Grid Layout */
+/* @media screen { and (max-width: 23.44rem){
+    .container {
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five";
+    }
+} */
